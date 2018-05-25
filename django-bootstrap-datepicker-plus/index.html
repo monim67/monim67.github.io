@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>django-bootstrap-datepicker-plus Demo</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" type="text/css"
+        media="all" rel="stylesheet" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/monim67/django-bootstrap-datepicker-plus/master/bootstrap_datepicker_plus/static/bootstrap_datepicker_plus/js/datepicker-widget.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>django-bootstrap-datepicker-plus widget components</h1>
+        <div class="row">
+            <div class='col-sm-6'>
+                <form action="" method="post">
+                    <p>
+                        <label for="id_start_date">Start date:</label>
+                        <div class="input-group date">
+                            <input type="text" name="start_date" value="2018-05-21" class="form-control" required id="id_start_date" dp_config="{&quot;id&quot;: &quot;dp_1&quot;, &quot;picker_type&quot;: &quot;DATE&quot;, &quot;linked_to&quot;: null, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;YYYY-MM-DD&quot;, &quot;viewMode&quot;: &quot;days&quot;}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_end_date">End date:</label>
+                        <div class="input-group date">
+                            <input type="text" name="end_date" value="05/23/2018" class="form-control" required id="id_end_date" dp_config="{&quot;id&quot;: &quot;dp_2&quot;, &quot;picker_type&quot;: &quot;DATE&quot;, &quot;linked_to&quot;: &quot;dp_1&quot;, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;MM/DD/YYYY&quot;, &quot;viewMode&quot;: &quot;days&quot;, &quot;useCurrent&quot;: false}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_start_time">Start time:</label>
+                        <div class="input-group date">
+                            <input type="text" name="start_time" value="08:31" class="form-control" required id="id_start_time" dp_config="{&quot;id&quot;: &quot;dp_5&quot;, &quot;picker_type&quot;: &quot;TIME&quot;, &quot;linked_to&quot;: null, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;HH:mm&quot;}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_end_time">End time:</label>
+                        <div class="input-group date">
+                            <input type="text" name="end_time" value="08:32" class="form-control" required id="id_end_time" dp_config="{&quot;id&quot;: &quot;dp_6&quot;, &quot;picker_type&quot;: &quot;TIME&quot;, &quot;linked_to&quot;: &quot;dp_5&quot;, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;HH:mm&quot;, &quot;useCurrent&quot;: false}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_start_datetime">Start datetime:</label>
+                        <div class="input-group date">
+                            <input type="text" name="start_datetime" value="05/16/2018 12:31" class="form-control" required id="id_start_datetime" dp_config="{&quot;id&quot;: &quot;dp_3&quot;, &quot;picker_type&quot;: &quot;DATETIME&quot;, &quot;linked_to&quot;: null, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;MM/DD/YYYY HH:mm&quot;}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_end_datetime">End datetime:</label>
+                        <div class="input-group date">
+                            <input type="text" name="end_datetime" value="05/16/2018 12:31" class="form-control" required id="id_end_datetime" dp_config="{&quot;id&quot;: &quot;dp_4&quot;, &quot;picker_type&quot;: &quot;DATETIME&quot;, &quot;linked_to&quot;: &quot;dp_3&quot;, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;MM/DD/YYYY HH:mm&quot;, &quot;useCurrent&quot;: false}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_start_month">Start month:</label>
+                        <div class="input-group date">
+                            <input type="text" name="start_month" value="2018-05-01" class="form-control" required id="id_start_month" dp_config="{&quot;id&quot;: &quot;dp_7&quot;, &quot;picker_type&quot;: &quot;MONTH&quot;, &quot;linked_to&quot;: null, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;YYYY-MM-01&quot;}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_end_month">End month:</label>
+                        <div class="input-group date">
+                            <input type="text" name="end_month" value="2018-06-01" class="form-control" required id="id_end_month" dp_config="{&quot;id&quot;: &quot;dp_8&quot;, &quot;picker_type&quot;: &quot;MONTH&quot;, &quot;linked_to&quot;: &quot;dp_7&quot;, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;YYYY-MM-01&quot;, &quot;useCurrent&quot;: false}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_start_year">Start year:</label>
+                        <div class="input-group date">
+                            <input type="text" name="start_year" value="2017-01-01" class="form-control" required id="id_start_year" dp_config="{&quot;id&quot;: &quot;dp_9&quot;, &quot;picker_type&quot;: &quot;YEAR&quot;, &quot;linked_to&quot;: null, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;YYYY-01-01&quot;}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="id_end_year">End year:</label>
+                        <div class="input-group date">
+                            <input type="text" name="end_year" value="2018-01-01" class="form-control" required id="id_end_year" dp_config="{&quot;id&quot;: &quot;dp_10&quot;, &quot;picker_type&quot;: &quot;YEAR&quot;, &quot;linked_to&quot;: &quot;dp_9&quot;, &quot;options&quot;: {&quot;showClose&quot;: true, &quot;showClear&quot;: true, &quot;showTodayButton&quot;: true, &quot;format&quot;: &quot;YYYY-12-31&quot;, &quot;useCurrent&quot;: false}}"
+                            />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
